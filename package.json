@@ -1,0 +1,21 @@
+{
+	"name": "dhash",
+	"version": "0.0.1",
+	"description": "Compute dHash of images",
+	"keywords": ["image", "hash", "dhash", "compare", "comparison", "picture", "photo", "algorithm"],
+	"main": "index.js",
+	"scripts": {
+		"test": "node node_modules/mocha/bin/mocha test/"
+	},
+	"author": "Richard van der Dys <richard.vanderdys@gmail.com> (http://richardvanderdys.com/)",
+	"license": "MIT",
+	"dependencies": {
+		"gm": "latest",
+		"png-js": "latest",
+		"stream-to-array": "latest"
+	},
+	"devDependencies": {
+		"mocha": "latest",
+		"should": "latest"
+	}
+}
