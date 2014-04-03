@@ -1,7 +1,7 @@
 {
 	"name": "dhash",
-	"version": "0.0.1",
-	"description": "Compute dHash of images",
+	"version": "0.0.2",
+	"description": "Compute difference hash of image",
 	"keywords": ["image", "hash", "dhash", "compare", "comparison", "picture", "photo", "algorithm"],
 	"main": "index.js",
 	"scripts": {

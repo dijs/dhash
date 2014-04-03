@@ -1,7 +1,13 @@
-dhash
+dhash (difference hash)
 =========
 
 dHash - image hash implementation for node
+
+### Install
+
+```
+npm install dhash
+```
 
 ### Usage
 
