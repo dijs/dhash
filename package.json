@@ -1,6 +1,6 @@
 {
 	"name": "dhash",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Compute difference hash of image",
 	"keywords": ["image", "hash", "dhash", "compare", "comparison", "picture", "photo", "algorithm"],
 	"main": "index.js",
@@ -17,5 +17,9 @@
 	"devDependencies": {
 		"mocha": "latest",
 		"should": "latest"
+	},
+	"repository" : {
+		"type" : "git",
+		"url" : "https://github.com/rompetoto/dhash.git"
 	}
 }
