@@ -20,6 +20,6 @@
 	},
 	"repository" : {
 		"type" : "git",
-		"url" : "https://github.com/rompetoto/dhash.git"
+		"url" : "https://github.com/dijs/dhash.git"
 	}
 }
