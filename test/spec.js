@@ -55,7 +55,7 @@ describe('dhash', function() {
 	});
 
 	it('should throw an error: Incomplete or corrupt PNG file', function(done) {
-		dhash(new Buffer([]), function(err, hash) {
+		dhash(new Buffer([]), function(err) {
 			should.exist(err);
 			done();
 		});
