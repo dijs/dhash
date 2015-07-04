@@ -1,9 +1,13 @@
-var
-gm = require('gm'),
-	PNG = require('png-js'),
-	toArray = require('stream-to-array'),
-	DEFAULT_HASH_SIZE = 8,
-	PIXEL_LENGTH = 4;
+'use strict';
+
+var gm = require('gm').subClass({
+	imageMagick: true
+});
+var PNG = require('png-js');
+var toArray = require('stream-to-array');
+
+var DEFAULT_HASH_SIZE = 8;
+var PIXEL_LENGTH = 4;
 
 function px(pixels, width, x, y) {
 	return pixels[width * PIXEL_LENGTH * y + x * PIXEL_LENGTH];
@@ -29,12 +33,16 @@ module.exports = function(path, callback, hashSize) {
 		.resize(width, height, '!')
 		.stream('png', function(err, stream) {
 			if (err) {
-				callback && callback(err);
+				if (callback) {
+					callback(err);
+				}
 			} else {
 				// Get pixel data
-				toArray(stream, function(err, arr) {
-					if (err) {
-						callback && callback(err);
+				toArray(stream, function(toArrayErr, arr) {
+					if (toArrayErr) {
+						if (callback) {
+							callback(toArrayErr);
+						}
 					} else {
 						new PNG(Buffer.concat(arr)).decode(function(pixels) {
 							// Compare adjacent pixels.
@@ -47,7 +55,9 @@ module.exports = function(path, callback, hashSize) {
 								}
 							}
 							// Convert difference to hex string
-							callback && callback(false, binaryToHex(difference));
+							if (callback) {
+								callback(false, binaryToHex(difference));
+							}
 						});
 					}
 				});

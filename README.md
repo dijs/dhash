@@ -1,5 +1,7 @@
-dhash (difference hash)
-=========
+[![NPM Version](https://img.shields.io/npm/v/dhash.svg)](https://www.npmjs.com/package/dhash)
+[![Build Status](https://travis-ci.org/dijs/dhash.svg)](https://travis-ci.org/dijs/dhash)
+
+# dhash (difference hash)
 
 dHash - image hash implementation for node
 
@@ -8,6 +10,8 @@ dHash - image hash implementation for node
 ```
 npm install dhash
 ```
+
+** Requires (Image Magick)[http://imagemagick.org/] **
 
 ### Usage
 
