@@ -11,7 +11,7 @@ dHash - image hash implementation for node
 npm install dhash
 ```
 
-**Requires (Image Magick)[http://imagemagick.org/]**
+**Requires [Image Magick](http://imagemagick.org/)**
 
 ### Usage
 
