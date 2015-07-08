@@ -1,6 +1,6 @@
 {
   "name": "dhash",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Compute difference hash of image",
   "keywords": [
     "image",
