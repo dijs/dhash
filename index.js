@@ -44,7 +44,12 @@ module.exports = function(path, callback, hashSize) {
 							callback(toArrayErr);
 						}
 					} else {
-						new PNG(Buffer.concat(arr)).decode(function(pixels) {
+						try {
+							var png = new PNG(Buffer.concat(arr));
+						} catch (pngErr) {
+							return callback && callback(pngErr);
+						}
+						png.decode(function(pixels) {
 							// Compare adjacent pixels.
 							var difference = '';
 							for (var row = 0; row < height; row++) {

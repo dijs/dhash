@@ -1,6 +1,6 @@
 'use strict';
 
-require('should');
+var should = require('should');
 var path = require('path');
 var dhash = require(path.join(__dirname, '/../index.js'));
 
@@ -51,6 +51,13 @@ describe('dhash', function() {
 				hamming(highHash, lowHash).should.be.below(3);
 				done();
 			});
+		});
+	});
+
+	it('should throw an error: Incomplete or corrupt PNG file', function(done) {
+		dhash(new Buffer([]), function(err) {
+			should.exist(err);
+			done();
 		});
 	});
 
